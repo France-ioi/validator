@@ -10,7 +10,7 @@ import (
 
 	"github.com/go-playground/locales"
 	"github.com/go-playground/universal-translator"
-	"gopkg.in/go-playground/validator.v9"
+	"github.com/France-ioi/validator"
 )
 
 // RegisterDefaultTranslations registers a set of default translations
