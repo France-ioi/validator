@@ -791,7 +791,7 @@ func TestStructValidation_SkipsInnerFieldsOfNullNestedStructs(t *testing.T) {
 	val := New()
 
 	fn1 := func(fl FieldLevel) bool {
-		return fl.Field().FieldByName("Test").String() == "some value"
+		return !fl.Field().IsNil() && fl.Field().FieldByName("Test").String() == "some value"
 	}
 
 	val.RegisterValidation("one", fn1)
